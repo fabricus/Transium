@@ -39,7 +39,7 @@ First, you'll probably need to add an npm module:
 npm install truffle-hdwallet-provider
 ```
 In `truffle-config.js` add the following lines at the beggining of the file:
-```
+```js
 'use strict';
 
 var HDWalletProvider = require("truffle-hdwallet-provider");
