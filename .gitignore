@@ -7,3 +7,4 @@ package-lock.json
 package.json
 .zos.**
 truffle-config.js
+zos.json
