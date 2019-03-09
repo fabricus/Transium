@@ -3,4 +3,7 @@
 node_modules/**
 zos.dev-**.json
 build/contracts/**
+package-lock.json
+package.json
 .zos.**
+truffle-config.js

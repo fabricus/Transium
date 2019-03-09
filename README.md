@@ -1,5 +1,8 @@
+# Installation steps
+
 To keep the repo lean, we've excluded all modules from node_modules so you should install them manually:
 ```
+npm init
 npm install zos
 npm install truffle@5.0.4
 npm install zos-lib
