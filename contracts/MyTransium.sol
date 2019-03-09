@@ -5,9 +5,7 @@ import "openzeppelin-eth/contracts/token/ERC721/ERC721MetadataMintable.sol";
 import "openzeppelin-eth/contracts/token/ERC721/ERC721Pausable.sol";
 
 contract MyTransium is ERC721Full, ERC721MetadataMintable, ERC721Pausable {
-    using SafeMath for uint256;
-
-    // Initializing an ERC-721 Token with its name & symbol
+    // Initializing an ERC-721 Token with its name, symbol and allowed minters & pausers addresses
     function initialize(string memory name, string memory symbol, address[] memory minters, address[] memory pausers) public initializer {
         ERC721.initialize();
         ERC721Enumerable.initialize();
