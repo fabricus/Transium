@@ -56,6 +56,29 @@ ropsten: {
   network_id: 1
 }
 ```
+Ultimately, your `truffle-config.js` file should look something like this (minus the header lines mentioned previously):
+```js
+module.exports = {
+  networks: {
+    local: {
+      host: 'localhost',
+      port: 9545,
+      gas: 5000000,
+      gasPrice: 5e9,
+      network_id: '*',
+    },
+    rinkeby: {
+      provider: function() {
+        return new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/v3/...")
+      },
+      gas: 5000000,
+      gasPrice: 5e9,
+      network_id: 1
+    }
+  }
+}
+```
+
 Once it's done, simply:
 ```
 zos push --network ropsten
