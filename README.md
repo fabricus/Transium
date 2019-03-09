@@ -32,3 +32,30 @@ You can then initialize (publish) the contract:
 ```
 npx zos create MyTransium --init initialize --args Transium,TRZ
 ```
+
+# Publishing to testnet (ropsten, rinkeby, etc.) or mainnet
+```
+npm install truffle-hdwallet-provider
+```
+In `truffle-config.js` add the following lines at the beggining of the file:
+```
+'use strict';
+
+var HDWalletProvider = require("truffle-hdwallet-provider");
+var mnemonic = "SEED_OF_YOUR_WALLET";
+```
+And then, for each network you want to support, simply add the following (example bellow for ropsten, just change the network name by mainnet, rinkeby or any network you want to set up and that's supported by Infura):
+```js
+ropsten: {
+  provider: function() {
+    return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/[YOUR_INFURA_PROJECT_ID]")
+  },
+  gas: 5000000,
+  gasPrice: 5e9,
+  network_id: 1
+}
+```
+Once it's done, simply:
+```
+zos push --network ropsten
+```
