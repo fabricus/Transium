@@ -30,5 +30,5 @@ npx zos push --deploy-dependencies
 
 You can then initialize (publish) the contract:
 ```
-npx zos create MyTransium --init initialize --args Transium,TRZ
+npx zos create MyTransium --init initialize --args Transium,TRZ, [MINTER-ADRESS], [PAUSER-ADDRESS]
 ```
