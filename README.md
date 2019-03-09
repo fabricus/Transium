@@ -14,9 +14,9 @@ Now we can add the contract(s) to the project:
 npx zos add MyTransium
 ```
 
-To deploy (compile for now) the contract to an ETH address you can use the following command (I'm assuming your deploying that on a local blockchain like Ganache):
+To deploy (compile for now) the contract to an ETH address you can use the following command (replacing the ETH address by one you own) assuming your deploying that on a local blockchain like Ganache:
 ```
-npx zos session --network local --from 0x2dDc168B7Aa06Cf2c8Ab68eF74818120915eb307 --expires 3600 (replace the ETH address by one you own)
+npx zos session --network local --from 0x2dDc168B7Aa06Cf2c8Ab68eF74818120915eb307 --expires 3600
 npx zos push
 ```
 
