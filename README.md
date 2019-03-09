@@ -67,9 +67,9 @@ module.exports = {
       gasPrice: 5e9,
       network_id: '*',
     },
-    rinkeby: {
+    ropsten: {
       provider: function() {
-        return new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/v3/...")
+        return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/...")
       },
       gas: 5000000,
       gasPrice: 5e9,
