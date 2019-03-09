@@ -1,2 +1,6 @@
 .DS_Store
 .zos.session
+node_modules/**
+zos.dev-**.json
+build/contracts/**
+.zos.**

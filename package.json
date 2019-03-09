@@ -1,0 +1,25 @@
+{
+  "name": "transium",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabricus/Transium.git"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/fabricus/Transium/issues"
+  },
+  "homepage": "https://github.com/fabricus/Transium#readme",
+  "dependencies": {
+    "openzeppelin-eth": "^2.1.3",
+    "truffle": "^5.0.4",
+    "zos": "^2.2.1",
+    "zos-lib": "^2.2.1"
+  }
+}

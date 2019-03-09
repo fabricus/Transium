@@ -2,5 +2,10 @@
   "zosversion": "2.2",
   "name": "Transium",
   "version": "0.1.0",
-  "contracts": {}
+  "contracts": {
+    "MyTransium": "MyTransium"
+  },
+  "dependencies": {
+    "openzeppelin-eth": "^2.1.3"
+  }
 }
