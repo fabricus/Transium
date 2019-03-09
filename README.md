@@ -34,6 +34,7 @@ npx zos create MyTransium --init initialize --args Transium,TRZ
 ```
 
 # Publishing to testnet (ropsten, rinkeby, etc.) or mainnet
+First, you'll probably need to add an npm module:
 ```
 npm install truffle-hdwallet-provider
 ```
