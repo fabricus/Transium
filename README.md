@@ -19,7 +19,7 @@ npx zos add MyTransium
 
 To deploy (compile for now) the contract to an ETH address you can use the following command (replacing the ETH address by one you own) assuming your deploying that on a local blockchain like Ganache:
 ```
-npx zos session --network local --from 0x2dDc168B7Aa06Cf2c8Ab68eF74818120915eb307 --expires 3600
+npx zos session --network local --from YOUR_ETH_ADDR --expires 3600
 npx zos push
 ```
 
@@ -38,48 +38,21 @@ First, you'll probably need to add an npm module:
 ```
 npm install truffle-hdwallet-provider
 ```
-In `truffle-config.js` add the following lines at the beggining of the file:
-```js
-'use strict';
+You can copy/paste the content of `dummy-truffle-config.js` into `truffle-config.js` (remove existing content) and simply update your INFURA_KEY as well as your ".secret" file (actually you'll have to create that file and it should only contain your mnemonic / 12 words seed).
 
-var HDWalletProvider = require("truffle-hdwallet-provider");
-var mnemonic = "SEED_OF_YOUR_WALLET";
-```
-And then, for each network you want to support, simply add the following (example bellow for ropsten, just change the network name by mainnet, rinkeby or any network you want to set up and that's supported by Infura):
+The dummy file contains examples for local netword and Ropsten testnet but if you want to add a new one (like mainnet for example) simply add another bloc like this:
 ```js
-ropsten: {
+mainnet: {
   provider: function() {
-    return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/[YOUR_INFURA_PROJECT_ID]")
+    return new HDWalletProvider(mnemonic, "https://mainnet.infura.io/v3/[YOUR_INFURA_PROJECT_ID]")
   },
   gas: 5000000,
   gasPrice: 5e9,
   network_id: 1
 }
 ```
-Ultimately, your `truffle-config.js` file should look something like this (minus the header lines mentioned previously):
-```js
-module.exports = {
-  networks: {
-    local: {
-      host: 'localhost',
-      port: 9545,
-      gas: 5000000,
-      gasPrice: 5e9,
-      network_id: '*',
-    },
-    ropsten: {
-      provider: function() {
-        return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/...")
-      },
-      gas: 5000000,
-      gasPrice: 5e9,
-      network_id: 1
-    }
-  }
-}
-```
 
-Once it's done, simply:
+Once it's done (example for deploying on Ropsten), simply:
 ```
 zos push --network ropsten
 ```
