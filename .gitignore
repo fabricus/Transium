@@ -1,7 +1,7 @@
 .DS_Store
 .zos.session
 node_modules/**
-zos.dev-**.json
+zos.**.json
 build/contracts/**
 package-lock.json
 package.json

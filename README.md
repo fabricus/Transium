@@ -30,7 +30,7 @@ npx zos push --deploy-dependencies
 
 You can then initialize (publish) the contract:
 ```
-npx zos create MyTransium --init initialize --args Transium,TRZ
+npx zos create MyTransium --init initialize --args Transium,TRZ,[ETH_ADDR_THAT_CAN_MINT],[ETH_ADDR_THAT_CAN_PAUSE]
 ```
 
 # Publishing to testnet (ropsten, rinkeby, etc.) or mainnet
