@@ -1,10 +1,8 @@
 .DS_Store
-.zos.session
 node_modules/**
-zos.**.json
-build/contracts/**
-package-lock.json
-package.json
+zos.**
 .zos.**
-truffle-config.js
-zos.json
+build/contracts/**
+package**.json
+.key
+.secret

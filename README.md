@@ -7,6 +7,8 @@ npm install zos
 npm install truffle@5.0.4
 npm install zos-lib
 ```
+You need to create 2 files at the root of the projet: `.key` and `.secret`. `.key` should only contain a single string representing your INFURA API KEY (something like `732...1c6e2`) - It's not necessary if you are running a local blockchain. The file `.secret` should contain the 1é words seed/mnemonic used to generate your wallet (whatever you're running this on a local blockchain or a testnet or even mainnet you'll need that).
+
 We'll need to install an EVM Registry (by ZepplinOS) so that we don't waste too many ressources:
 ```
 npx zos link openzeppelin-eth
