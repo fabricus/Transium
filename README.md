@@ -40,9 +40,7 @@ First, you'll probably need to add an npm module:
 ```
 npm install truffle-hdwallet-provider
 ```
-You can copy/paste the content of `dummy-truffle-config.js` into `truffle-config.js` (remove existing content) and simply update your INFURA_KEY as well as your ".secret" file (actually you'll have to create that file and it should only contain your mnemonic / 12 words seed).
-
-The dummy file contains examples for local netword and Ropsten testnet but if you want to add a new one (like mainnet for example) simply add another bloc like this:
+The `truffle-config.js` file provided here contains examples for local network and Ropsten testnet but if you want to add a new one (like mainnet for example) simply add another bloc like this:
 ```js
 mainnet: {
   provider: function() {
